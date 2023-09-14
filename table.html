@@ -234,7 +234,7 @@
                               </div>
                             </div>
                           </div>
-                       <div style="height: 0px;"><input id="checkboxes" type="checkbox" style="display:none" />   </div> 
+                       <div style="height: 0px;"><input onclick="updateCheckbox()" id="checkboxes" type="checkbox" style="display:none" />   </div> 
                         <div class="panel-body">
                        
                           <div class="table-responsive">
@@ -1198,16 +1198,20 @@
            $(".update").hide()
            $(".add").show()
            $("#checkboxes").hide()
+           $("#trashes").hide()
 
         }
 
         function Update(){
-         
-        
            $(".update").show()
            $(".add").hide()
            $("#checkboxes").show()
-           $("#trashes").show()
+           $("#trashes").hide()
+         
+        }
+
+        function updateCheckbox() {
+            $("#modalAdd").modal('show')
         }
 
         function Submit(){
@@ -1291,12 +1295,18 @@
        }
 
        function Delete(){
-        
+      
         $("#checkboxes").show()
+        $("#trashes").show()
 
      
 
        }
+
+       function deleteCheckbox() {
+            $("#modalAdd").modal('hide')
+        }
+
 
 
     </script>
