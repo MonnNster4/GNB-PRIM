@@ -2321,8 +2321,9 @@ input[type="search"] {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
+  margin: 5px 0 0;
+  margin-top: 117px;
+  margin-left: 10px;
   line-height: normal;
 }
 input[type="file"] {
@@ -5001,8 +5002,10 @@ a.list-group-item-danger.active:focus {
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 .panel-body {
-  padding: 15px;
+  padding: 29px;
+  margin-left: 4px;
 }
+
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
