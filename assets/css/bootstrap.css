@@ -2122,7 +2122,7 @@ th {
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+ 
 }
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
@@ -5003,7 +5003,6 @@ a.list-group-item-danger.active:focus {
 }
 .panel-body {
   padding: 29px;
-  margin-left: 4px;
 }
 
 .panel-heading {
