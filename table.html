@@ -250,7 +250,7 @@
                               <div class="modal-content modalProfile">
                                 <div class="modal-header">
                       
-                                  <h2 class="modal-title t_name" id="membershipFormLabel">PROFILE</h2>
+                                  <h2 class="modal-title t_name" id="membershipFormLabel">Profile</h2>
                       
                                   <button onclick="Cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close" >
                                     <span aria-hidden="true">&times;</span>
@@ -269,10 +269,13 @@
                                 
                                 flex-direction: column;
                             ">
-                                      <label>First Name</label>
+                                      <label>Username</label>
+                                      <input type="text" class="form-control textbox-profile" name="companyName" id="companyName" placeholder="" style="
+                                      margin-bottom: 10px;">
+                                      <label>Name</label>
                                       <input type="text" class="form-control textbox-profile" name="id" id="id" placeholder="" style="
                                       margin-bottom: 10px;"> 
-                                      <label>Last Name</label>
+                                      <label>Email</label>
                                       <input type="text" class="form-control textbox-profile" name="companyName" id="companyName" placeholder="">
                                     </div> 
                                 
@@ -307,7 +310,7 @@
                               <div class="modal-content modalProfile">
                                 <div class="modal-header">
                       
-                                  <h2 class="modal-title t_name" id="membershipFormLabel">USER DETAILS</h2>
+                                  <h2 class="modal-title t_name" id="membershipFormLabel">Change Password</h2>
                       
                                   <button onclick="Cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close" >
                                     <span aria-hidden="true">&times;</span>
@@ -326,6 +329,7 @@
                                 gap: 10px;
                                 flex-direction: column;
                             ">
+                                      <input type="text" class="form-control textbox-profile" name="id" id="id" placeholder="Old Password">
                                       <input type="text" class="form-control textbox-profile" name="id" id="id" placeholder="New Password">
                                       <input type="text" class="form-control textbox-profile" name="companyName" id="companyName" placeholder="Confirm New Password">
                                     </div> 
