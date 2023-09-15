@@ -3128,8 +3128,8 @@ tbody.collapse.in {
 }
 .dropdown-menu {
   position: absolute;
-  top: 70%;
-  left: 82%;
+  top: 80%;
+  left: 80%;
   z-index: 1000;
   display: none;
   float: left;

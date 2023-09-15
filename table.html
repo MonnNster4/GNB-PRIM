@@ -44,15 +44,14 @@
             </div>
 
             <div class="right-div">
-                <li>
+                
                 <a href="#" class="btn btn-info pull-right dropdown-toggle"  id="ddlmenuItem" data-toggle="dropdown" style="
-                font-weight: bold;">Account <i class="fa fa-angle-down"></i></a>
+                font-weight: bold; margin-top: 10px;">Account <i class="fa fa-angle-down"></i></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="table.html">Account</a></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="table.html">Profile</a></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="blank.html">Settings</a></li>
-                     <li role="presentation"><a role="menuitem" tabindex="-1" href="blank.html">Logout</a></li>
-                </ul></li>
+                     <li role="presentation" ><a type="button"  role="menuitem" tabindex="-1" onclick="Profile(); return false" href="" >Profile</a></li>
+                     <li role="presentation"><a role="menuitem"  tabindex="-1" onclick="Settings(); return false" href="">Settings</a></li>
+                     <li role="presentation"><a role="menuitem" tabindex="-1" href="">Logout</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -64,16 +63,22 @@
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">CANDIDATE <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown" style="
+                                font-weight: bolder;
+                            ">CANDIDATE <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="table.html">CANDIDATE</a></li>
                                      <li role="presentation"><a role="menuitem" tabindex="-1" href="blank.html">CLIENT</a></li>
                                 </ul>
                             </li>
                  
-                            <li><a href="index.html" >TERM</a></li>
+                            <li><a href="index.html"  style="
+                                font-weight: bolder;
+                            ">TERM</a></li>
                             
-                            <li><a href="form.html">TIMESHEETS</a></li>
+                            <li><a href="form.html" style="
+                                font-weight: bolder;
+                            ">TIMESHEETS</a></li>
                            
                            <!-- <li><a href="tab.html" > TABS & PANELS</a></li>-->
                            
@@ -229,6 +234,117 @@
                                     <button type="submit" class="form-control add" id="submit-button" name="submit" onclick="Submit()">SUBMIT</button>
                                     <button type="submit" class="form-control update" id="submit-button" name="submit" onclick="Update()">UPDATE</button>
                                     <button type="submit" class="form-control" id="submit-button" name="submit" onclick="Cancel()">CANCEL</button>
+                                  </div>
+                                 
+                                </div>
+                      
+                                <div class="modal-footer"></div>
+                      
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalProfile" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="    margin: 1.75rem auto;     max-width: 1000px !important;">
+                      
+                              <div class="modal-content modalProfile">
+                                <div class="modal-header">
+                      
+                                  <h2 class="modal-title t_name" id="membershipFormLabel">PROFILE</h2>
+                      
+                                  <button onclick="Cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                      
+                                <div class="modal-body">
+                                  <div class="membership-form webform modal_content" role="form">
+                                    <div class="modal_details" style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                ">
+                                <div class="password-textbox" style="
+                                display: flex;
+                                
+                                flex-direction: column;
+                            ">
+                                      <label>First Name</label>
+                                      <input type="text" class="form-control textbox-profile" name="id" id="id" placeholder="" style="
+                                      margin-bottom: 10px;"> 
+                                      <label>Last Name</label>
+                                      <input type="text" class="form-control textbox-profile" name="companyName" id="companyName" placeholder="">
+                                    </div> 
+                                
+                              <div class="btn_content" style="
+                              width: fit-content;
+                              display: flex;
+                              /* justify-content: center; */
+                              /* align-items: center; */
+                              align-content: center;
+                              gap: 10px;
+                              margin-left: 200px;
+                              /* flex-direction: column; */
+                          ">
+                                
+                                    <button type="submit" class="form-control" id="submit-button" name="submit" onclick="Update()">UPDATE</button>
+                                    <button type="submit" class="form-control" id="submit-button" name="submit" onclick="CancelProfile()">CANCEL</button>
+                                </div>
+                                    </div>
+                                  </div>
+                                 
+                                </div>
+                      
+                                <div class="modal-footer"></div>
+                      
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalSettings" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="    margin: 1.75rem auto;     max-width: 1000px !important;">
+                      
+                              <div class="modal-content modalProfile">
+                                <div class="modal-header">
+                      
+                                  <h2 class="modal-title t_name" id="membershipFormLabel">USER DETAILS</h2>
+                      
+                                  <button onclick="Cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                      
+                                <div class="modal-body">
+                                  <div class="membership-form webform modal_content" role="form">
+                                    <div class="modal_details" style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                ">
+                                <div class="password-textbox" style="
+                                display: flex;
+                                gap: 10px;
+                                flex-direction: column;
+                            ">
+                                      <input type="text" class="form-control textbox-profile" name="id" id="id" placeholder="New Password">
+                                      <input type="text" class="form-control textbox-profile" name="companyName" id="companyName" placeholder="Confirm New Password">
+                                    </div> 
+                                 
+                              <div class="btn_content" style="
+                              width: fit-content;
+                              display: flex;
+                              /* justify-content: center; */
+                              /* align-items: center; */
+                              align-content: center;
+                              gap: 10px;
+                              margin-left: 200px;
+                              /* flex-direction: column; */
+                          ">
+                                
+                                    <button type="submit" class="form-control" id="submit-button" name="submit" onclick="Update()">SAVE</button>
+                                    <button type="submit" class="form-control" id="submit-button" name="submit" onclick="CancelSettings()">CANCEL</button>
+                                </div>
+                                    </div>
                                   </div>
                                  
                                 </div>
@@ -1313,9 +1429,16 @@
     
         function Cancel(){
         $("#modalAdd").modal('hide')
-        $("#DeleteModal").modal('hide')
-        $(".update").hide()
-        $(".add").show()
+        Clear()
+       }
+
+       function CancelProfile(){
+        $("#modalProfile").modal('hide')
+        Clear()
+       }
+
+       function CancelSettings(){
+        $("#modalSettings").modal('hide')
         Clear()
        }
 
@@ -1331,6 +1454,14 @@
        function deleteCheckbox() {
             $("#modalAdd").modal('hide')
         }
+
+       function Profile(){
+        $("#modalProfile").modal('show')
+       }
+
+       function Settings(){
+        $("#modalSettings").modal('show')
+       }
 
 
 

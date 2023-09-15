@@ -200,6 +200,12 @@ height: 60px;
     background-color:transparent;
 }
 
+.modal-content.modalProfile {
+    width: 54vh;
+    margin-left: 10vh;
+}
+
+
 
 
 /* =============================================================
@@ -219,6 +225,8 @@ height: 60px;
         color:#000;
     }
 
+
+    
 
 
 
