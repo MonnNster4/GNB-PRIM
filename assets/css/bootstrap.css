@@ -2322,8 +2322,8 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 5px 0 0;
-  margin-top: 151px;
-  margin-left: 10px;
+  margin-top: 135px;
+  margin-left: 38px;
   line-height: normal;
 }
 input[type="file"] {
